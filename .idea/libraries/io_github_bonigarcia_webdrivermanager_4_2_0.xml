@@ -1,0 +1,47 @@
+<component name="libraryTable">
+  <library name="io.github.bonigarcia:webdrivermanager:4.2.0" type="repository">
+    <properties maven-id="io.github.bonigarcia:webdrivermanager:4.2.0" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/io/github/bonigarcia/webdrivermanager/4.2.0/webdrivermanager-4.2.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/commons-io/commons-io/2.7/commons-io-2.7.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.8.6/gson-2.8.6.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/client5/httpclient5/5.0.1/httpclient5-5.0.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/core5/httpcore5/5.0.1/httpcore5-5.0.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/core5/httpcore5-h2/5.0.1/httpcore5-h2-5.0.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/commons-codec/commons-codec/1.13/commons-codec-1.13.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/rauschig/jarchivelib/1.0.0/jarchivelib-1.0.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-compress/1.18/commons-compress-1.18.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.13.1/jsoup-1.13.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/io/github/bonigarcia/webdrivermanager/4.2.0/webdrivermanager-4.2.0-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/commons-io/commons-io/2.7/commons-io-2.7-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.8.6/gson-2.8.6-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/client5/httpclient5/5.0.1/httpclient5-5.0.1-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/core5/httpcore5/5.0.1/httpcore5-5.0.1-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/core5/httpcore5-h2/5.0.1/httpcore5-h2-5.0.1-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/commons-codec/commons-codec/1.13/commons-codec-1.13-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/rauschig/jarchivelib/1.0.0/jarchivelib-1.0.0-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-compress/1.18/commons-compress-1.18-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.13.1/jsoup-1.13.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/io/github/bonigarcia/webdrivermanager/4.2.0/webdrivermanager-4.2.0-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/commons-io/commons-io/2.7/commons-io-2.7-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.8.6/gson-2.8.6-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/client5/httpclient5/5.0.1/httpclient5-5.0.1-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/core5/httpcore5/5.0.1/httpcore5-5.0.1-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/core5/httpcore5-h2/5.0.1/httpcore5-h2-5.0.1-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/commons-codec/commons-codec/1.13/commons-codec-1.13-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/rauschig/jarchivelib/1.0.0/jarchivelib-1.0.0-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-compress/1.18/commons-compress-1.18-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.13.1/jsoup-1.13.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
