@@ -1,24 +1,26 @@
-package com.seleniumMonolith;
+package com.cengage;
 
-import com.Utils.PropfileReader;
+/**
+ * Welcome to Cengage Test Automation!
+ * You will spend some time refactoring and extending this code. Use this as an opportunity to hone your craft
+ * on the road to becoming a Test Automation Artisan.
+ *
+ * “Indeed, the ratio of time spent reading versus writing is well over 10 to 1. We are constantly reading old code
+ * as part of the effort to write new code. ...[Therefore,] making it easy to read makes it easier to write.”
+ * Robert C. Martin, Clean Code: A Handbooks of Agile Software Craftsmanship
+ */
+
+import com.utils.PropfileReader;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-//Homework
-import org.testng.Assert;
-//Class2 Homework
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-import java.util.List;
-import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 public class webAssignLogin { //extends BaseTest {
@@ -47,8 +49,8 @@ public class webAssignLogin { //extends BaseTest {
      */
 
     /**
-     * TODO:
-     * capture screenshot on failure
+     * Class 2 Extra Credit:
+     * Capture screenshot on failure using the TestNG framework
      */
     @BeforeTest //This will run before the tests to ensure test setup
     public void testSetup() throws Exception {
@@ -76,9 +78,8 @@ public class webAssignLogin { //extends BaseTest {
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(implicitWait, TimeUnit.SECONDS);
-
+        //go to our website
         driver.get(url);
-
         //log in
         driver.findElement(emailInput).sendKeys(uid);
         driver.findElement(passwordInput).sendKeys(pwd);
@@ -92,7 +93,7 @@ public class webAssignLogin { //extends BaseTest {
 
         //Let's leave the window open so we can see it
         try {
-            Thread.sleep(1000);
+            Thread.sleep(5000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
