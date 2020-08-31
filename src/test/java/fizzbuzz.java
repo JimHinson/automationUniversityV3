@@ -7,33 +7,26 @@ public class fizzbuzz {
      * @return
      */
 
-    public static boolean palindrome(String toTest) {
-
-        return true;
-    }
-
     public static void print(String output) {
         System.out.println(output);
     }
 
     public static void fizzbuzz(int i) {
-        if ((i % 3) == 0){
+        if (((i % 3) == 0) && ((i % 5) == 0)) {
+            print("fizzbuzz");
+        } else if ((i % 3) == 0){
             print("fizz");
         } else if ((i % 5) == 0) {
             print("buzz");
         } else {
             print(new Integer(i).toString());
         }
-//        return true;
     }
 
     public static void main(String[] args){
         for (int i = 0; i < 100; i++){
             fizzbuzz(i);
         }
-        System.out.println("Is Palindrome:\n"
-                + "fizzbuzz: " + new Boolean(palindrome("fizzbuzz")).toString()
-        );
         //in class we'll write this code
     }
 }
