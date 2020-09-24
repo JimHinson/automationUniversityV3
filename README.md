@@ -6,3 +6,8 @@ You will need to register for this course: webassign 0090 8124
 You can find our wiki here:
 https://wiki.cengage.com/display/PQA/Cengage+Automation+University
 
+<H1> Getting Started </H1>
+Using IntelliJ<br>
+1. File -> New -> Project from Version Control <br>
+2. Enter this url: https://github.com/JimHinson/automationUniversityV3.git <br>
+3. Open /src/test/java/com/cengage/webAssignLogin.java
