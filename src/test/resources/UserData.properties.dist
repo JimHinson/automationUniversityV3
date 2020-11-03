@@ -2,7 +2,7 @@
 # Add your login credentials
 # Do NOT check your copy into source control
 
-url=https://www.webassign.net/wa-auth/login
+url=https://www.wa-staging.net/v4cgi/login.pl
 
 userId=
 password=
