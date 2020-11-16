@@ -14,6 +14,7 @@ import com.utils.PropfileReader;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -72,14 +73,15 @@ public class webAssignLogin { //extends BaseTest {
         String browserOptions = (PropfileReader.getSetting("browserOptions"));
 
         // Selenium setup
-        WebDriver driver;
         ChromeOptions options = new ChromeOptions();
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(implicitWait, TimeUnit.SECONDS);
+        
         //go to our website
         driver.get(url);
+
         //log in
         driver.findElement(emailInput).sendKeys(uid);
         driver.findElement(passwordInput).sendKeys(pwd);
@@ -92,13 +94,32 @@ public class webAssignLogin { //extends BaseTest {
         driver.findElement(By.xpath("/html/body/form/div/main/div[1]/div/div/div[1]/nav/div/button"));
 
         //Let's leave the window open so we can see it
+        mySleep(2000);
+    }
+
+    public void mySleep(long millis) {
         try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+            Thread.sleep(millis);
+        } catch (InterruptedException ie) {
+            System.out.println("We were interrupted! Stopping");
+            System.exit(1);
         }
+    }
+
+    @Test
+    public void accessClass() {
+        Select courseSelect = new Select(driver.findElement(By.id("courseSelect")));
+        //<option value="487924,690733"></option>
+        courseSelect.selectByVisibleText("CSC 230 Cengage software test automation, section 0001, Fall 2020");
+        mySleep(1000);
+        courseSelect.selectByIndex(1);
+        mySleep(2000);
+        driver.findElement(By.cssSelector("#courseSelect [data-analytics='student-course-link-clicked']"));
+        driver.findElement(By.linkText("Go")).click();
+        //<option value="473386,675977">Blackboard - Chem31126, section Chem31126 NewUI, Summer 1 2019</option>
+        //Let's leave the window open so we can see it
+        mySleep(25000);
         driver.close();
         driver.quit();
     }
-
 }

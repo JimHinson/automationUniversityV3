@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/automationUniversityV3.iml" filepath="$PROJECT_DIR$/.idea/automationUniversityV3.iml" />
-      <module fileurl="file://$PROJECT_DIR$/src/test/java/com/seleniumMonolith/seleniumMonolith.iml" filepath="$PROJECT_DIR$/src/test/java/com/seleniumMonolith/seleniumMonolith.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/test/java/com/cengage/seleniumMonolith.iml" filepath="$PROJECT_DIR$/src/test/java/com/cengage/seleniumMonolith.iml" />
     </modules>
   </component>
 </project>

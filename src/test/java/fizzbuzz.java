@@ -12,8 +12,8 @@ public class fizzbuzz {
     }
 
     public static void fizzbuzz(int i) {
-        if (((i % 3) == 0) && ((i % 5) == 0)) {
-            print("fizzbuzz");
+        if (((i % 3) == 0) && ((i % 5) == 0)) {  // % (Modulus) - Divides left-hand operand by right-hand operand and returns remainder.
+            print("fizzbuzzInClass");
         } else if ((i % 3) == 0){
             print("fizz");
         } else if ((i % 5) == 0) {
