@@ -1,13 +1,23 @@
 package com.cengage;
 
+import org.jetbrains.annotations.NotNull;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.internal.WebElementToJsonConverter;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 
 import java.awt.event.WindowAdapter;
+import java.util.NoSuchElementException;
+import java.util.concurrent.TimeUnit;
+import java.util.function.Function;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
+
 import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
@@ -19,7 +29,12 @@ public class loginPage {
     private static By passwordInput = By.id("okta-signin-password");
     private static By signInButton = By.id("okta-signin-submit");
 
-    public static void login(WebDriver driver, String uid, String pwd) {
+    public loginPage(@NotNull WebDriver driver) {
+        this.driver = driver;
+        PageFactory.initElements(driver, this);
+    }
+
+    public static void login(@NotNull WebDriver driver, String uid, String pwd) {
         driver.findElement(emailInput).sendKeys(uid);
         driver.findElement(nextButton).click();
         driver.findElement(passwordInput).sendKeys(pwd);
@@ -34,5 +49,7 @@ public class loginPage {
             }
         });
     }
+
+
 
 }
