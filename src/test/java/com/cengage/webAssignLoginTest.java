@@ -24,21 +24,19 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 import java.util.concurrent.TimeUnit;
 
-public class webAssignLogin { //extends BaseTest {
-    private By loginPageLogo = By.cssSelector("[aria-label='Return to WebAssign']");
-    private By emailInput = By.id("email");
-    private By passwordInput = By.id("cengagePassword");
-    private By signInButton = By.name("Login");
+public class webAssignLoginTest {
+    /**
+     * TODO: Move common functionality to a parent test class
+     * extends BaseTest {
+     */
 
     protected WebDriver driver;
 
-    private By homePageNavBar = By.cssSelector("[aria-label='WebAssign']");
-    private By homePage = By.cssSelector("main h1");
-    private By assignmentHomePage = By.cssSelector("[data-test='My Assignments']>ul li a");
-    public static String homepageURL;
-
     private By assignmentTitle = By.cssSelector("#js-assignment-header h1");
 
+    String url = "";
+    String uid = "";
+    String pwd = "";
 
 
     /**
@@ -63,35 +61,36 @@ public class webAssignLogin { //extends BaseTest {
     public void launchHomePage() {
     }
 
-    @Test
-    public void UserAccessAssignmentHomePage() {
-        String uid= (PropfileReader.getUserData("userId"));
-        String pwd = (PropfileReader.getUserData("password"));
-        String url = (PropfileReader.getUserData("url"));
-        int implicitWait = new Integer(PropfileReader.getSetting("implicitTimeout")).intValue();
-        String browser = (PropfileReader.getSetting("browser"));
-        String browserOptions = (PropfileReader.getSetting("browserOptions"));
+    protected void getLoginInfo() {
+        uid = (PropfileReader.getUserData("userId"));
+        pwd = (PropfileReader.getUserData("password"));
+        url = (PropfileReader.getUserData("url"));
+    }
 
+    protected void seleniumSetup(int implicitWait) {
         // Selenium setup
         ChromeOptions options = new ChromeOptions();
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(implicitWait, TimeUnit.SECONDS);
+    }
+
+    @Test
+    public void UserAccessAssignmentHomePage() {
+        getLoginInfo();
+        int implicitWait = new Integer(PropfileReader.getSetting("implicitTimeout")).intValue();
+        /**
+         * TODO: use browser and browserOptions in our properties file
+         */
+        seleniumSetup(implicitWait);
         
         //go to our website
         driver.get(url);
-
-        //log in
-        driver.findElement(emailInput).sendKeys(uid);
-        driver.findElement(passwordInput).sendKeys(pwd);
-        driver.findElement(signInButton).click();
+        loginPage.login(driver, uid, pwd);
 
         //WebAssign home page takes a bit longer to load.
-        driver.manage().timeouts().implicitlyWait(180, TimeUnit.SECONDS);
-
-        //wait for the class switcher to load so we we know WebAssign is loaded
-        driver.findElement(By.xpath("/html/body/form/div/main/div[1]/div/div/div[1]/nav/div/button"));
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
         //Let's leave the window open so we can see it
         mySleep(2000);
@@ -109,16 +108,15 @@ public class webAssignLogin { //extends BaseTest {
     @Test
     public void accessClass() {
         Select courseSelect = new Select(driver.findElement(By.id("courseSelect")));
-        //<option value="487924,690733"></option>
         courseSelect.selectByVisibleText("CSC 230 Cengage software test automation, section 0001, Fall 2020");
         mySleep(1000);
         courseSelect.selectByIndex(1);
         mySleep(2000);
-        driver.findElement(By.cssSelector("#courseSelect [data-analytics='student-course-link-clicked']"));
-        driver.findElement(By.linkText("Go")).click();
         //<option value="473386,675977">Blackboard - Chem31126, section Chem31126 NewUI, Summer 1 2019</option>
+        driver.findElement(By.cssSelector("[data-analytics='student-course-link-clicked']")).click();
+
         //Let's leave the window open so we can see it
-        mySleep(25000);
+        mySleep(5000);
         driver.close();
         driver.quit();
     }

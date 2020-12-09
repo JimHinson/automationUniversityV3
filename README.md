@@ -13,3 +13,16 @@ Using IntelliJ<br>
 1. File -> New -> Project from Version Control <br>
 2. Enter this url: https://github.com/JimHinson/automationUniversityV3.git <br>
 3. Open /src/test/java/com/cengage/webAssignLogin.java
+
+<H1>Class 3 </H1>
+Concept: Discover the patterns of good test design
+
+<H2>What We Discussed: <h2>
+Page objects and Test Objects
+
+<H2>Homework:  </h2>
+Create Test Objects and Page Objects from our sample project
+Add additional test cases (Complete the assignment "Automate This Assignment", Request an extension)
+
+<h2>Extra credit<h2>
+Automate the assignment "Automation University Quiz" and verify your score.
