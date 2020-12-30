@@ -39,21 +39,8 @@ public class webAssignLoginTest {
     String pwd = "";
 
 
-    /**
-     * go to assignment
-     */
-
-    /**
-     * assert true
-     */
-
-    /**
-     * Class 2 Extra Credit:
-     * Capture screenshot on failure using the TestNG framework
-     */
     @BeforeTest //This will run before the tests to ensure test setup
     public void testSetup() throws Exception {
-
     }
 
 
@@ -68,7 +55,6 @@ public class webAssignLoginTest {
     }
 
     protected void seleniumSetup(int implicitWait) {
-        // Selenium setup
         ChromeOptions options = new ChromeOptions();
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
@@ -107,16 +93,12 @@ public class webAssignLoginTest {
 
     @Test
     public void accessClass() {
-        Select courseSelect = new Select(driver.findElement(By.id("courseSelect")));
-        courseSelect.selectByVisibleText("CSC 230 Cengage software test automation, section 0001, Fall 2020");
-        mySleep(1000);
-        courseSelect.selectByIndex(1);
-        mySleep(2000);
-        //<option value="473386,675977">Blackboard - Chem31126, section Chem31126 NewUI, Summer 1 2019</option>
+        studentHomePage shp = new studentHomePage(this.driver);
+        shp.gotoCourse("CSC 230 Cengage software test automation, section 0001, Fall 2020");
         driver.findElement(By.cssSelector("[data-analytics='student-course-link-clicked']")).click();
 
         //Let's leave the window open so we can see it
-        mySleep(5000);
+        mySleep(15000);
         driver.close();
         driver.quit();
     }
