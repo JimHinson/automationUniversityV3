@@ -14,12 +14,14 @@ import java.util.function.Function;
 
 public class loginPage {
     private static By loginPageLogo = By.cssSelector("[aria-label='Return to WebAssign']");
-    private static By emailInput = By.id("email");
-    private static By passwordInput = By.id("cengagePassword");
-    private static By signInButton = By.name("Login");
+    private static By emailInput = By.id("idp-discovery-username");
+    private static By nextButton = By.id("idp-discovery-submit");
+    private static By passwordInput = By.id("okta-signin-password");
+    private static By signInButton = By.id("okta-signin-submit");
 
     public static void login(WebDriver driver, String uid, String pwd) {
         driver.findElement(emailInput).sendKeys(uid);
+        driver.findElement(nextButton).click();
         driver.findElement(passwordInput).sendKeys(pwd);
         driver.findElement(signInButton).click();
         Wait wait = new FluentWait<WebDriver>(driver)
