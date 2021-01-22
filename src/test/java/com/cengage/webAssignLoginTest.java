@@ -14,7 +14,6 @@ import com.utils.PropfileReader;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -59,7 +58,12 @@ public class webAssignLoginTest {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(implicitWait, TimeUnit.SECONDS);
+/**
+ * From https://www.selenium.dev/documentation/en/webdriver/waits/
+ * Warning: Do not mix implicit and explicit waits. Doing so can cause unpredictable wait times. For example, setting an
+ * implicit wait of 10 seconds and an explicit wait of 15 seconds could cause a timeout to occur after 20 seconds.
+ */
+//        driver.manage().timeouts().implicitlyWait(implicitWait, TimeUnit.SECONDS);
     }
 
     @Test
@@ -73,6 +77,7 @@ public class webAssignLoginTest {
         
         //go to our website
         driver.get(url);
+        LoginPage loginPage = new LoginPage(driver);
         loginPage.login(driver, uid, pwd);
 
         //WebAssign home page takes a bit longer to load.
