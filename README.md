@@ -24,5 +24,17 @@ Page objects and Test Objects
 Create Test Objects and Page Objects from our sample project
 Add additional test cases (Complete the assignment "Automate This Assignment", Request an extension)
 
-<h2>Extra credit<h2>
+<h2>Extra credit</h2>
 Automate the assignment "Automation University Quiz" and verify your score.
+
+<H1>Class 4</H1>
+**Concepts**: Discover the web and elements/Building reliable tests
+
+Locators: see loginPage, line 19.
+
+Page Factory: loginPage line 35 and 39+
+
+    Implicit: webAssignLoginTest line 61+
+    Explicit: loginPage line 49+
+    Fluent: loginPage line 58+
+Page Loading Strategy: We'll review this in class 5
