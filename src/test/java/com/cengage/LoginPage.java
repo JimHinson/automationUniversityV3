@@ -31,9 +31,10 @@ public class LoginPage {
     private final WebDriver driver;
 
     public LoginPage(@NotNull WebDriver driver) {
-        this.driver = driver;
         PageFactory.initElements(driver, this);
-    }
+        this.driver = driver;
+
+   }
 
     public void login(@NotNull WebDriver driver, String uid, String pwd) {
         /**
@@ -44,6 +45,7 @@ public class LoginPage {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
         emailInput.sendKeys(uid);
         nextButton.click();
         //Explicit Wait (https://www.selenium.dev/documentation/en/webdriver/waits/)

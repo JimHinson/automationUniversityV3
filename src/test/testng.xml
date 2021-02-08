@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Automation University3" verbose="2" parallel="none">
+    <parameter name="jim.hinson@gmail.com"  value="Cedric"/>
+    <test name="smoketest">
+        <classes>
+            <class name="com.cengage.webAssignLoginTest">
+                <methods>
+                    <include name="webAssignLoginTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="regression">
+        <classes>
+            <class name="fizzbuzz"></class>
+            <class name="com.cengage.webAssignLoginTest">
+                <methods>
+                    <include name="loginTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

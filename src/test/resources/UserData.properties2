@@ -1,0 +1,9 @@
+# Create a copy of this file, removing .dist
+# Add your login credentials
+# Do NOT check your copy into source control
+
+url=https://www.webassign.net/wa-auth/login
+
+userId=
+password=
+implicitTimeout=120

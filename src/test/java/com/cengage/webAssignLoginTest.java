@@ -14,8 +14,10 @@ import com.utils.PropfileReader;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.Reporter;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import org.openqa.selenium.By;
@@ -56,6 +58,7 @@ public class webAssignLoginTest {
     protected void seleniumSetup(int implicitWait) {
         ChromeOptions options = new ChromeOptions();
         WebDriverManager.chromedriver().setup();
+
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
 /**
@@ -87,6 +90,21 @@ public class webAssignLoginTest {
         mySleep(2000);
     }
 
+    @DataProvider(parallel = true, name = "data-provider")
+    public Object[][] users() {
+        return new Object[][] {{"jim.hinson@gmail.com", "Password1"} }; //, {"Jetson", "Password2"} };
+    }
+//https://www.toolsqa.com/testng/testng-dataproviders/
+    @Test(dataProvider = "data-provider")
+    public void multipleUserLogin(String uid, String pwd) {
+//        Reporter.log("a message");
+        getLoginInfo();
+        seleniumSetup(2);
+        driver.get(url);
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.login(driver, uid, pwd);
+    }
+
     public void mySleep(long millis) {
         try {
             Thread.sleep(millis);
@@ -96,7 +114,7 @@ public class webAssignLoginTest {
         }
     }
 
-    @Test
+//    @Test
     public void accessClass() {
         studentHomePage shp = new studentHomePage(this.driver);
         shp.gotoCourse("CSC 230 Cengage software test automation, section 0001, Fall 2020");
