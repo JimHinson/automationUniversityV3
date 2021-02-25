@@ -88,6 +88,8 @@ public class webAssignLoginTest {
 
         //Let's leave the window open so we can see it
         mySleep(2000);
+        driver.close();
+        driver.quit();
     }
 
     @DataProvider(parallel = true, name = "data-provider")
@@ -103,6 +105,8 @@ public class webAssignLoginTest {
         driver.get(url);
         LoginPage loginPage = new LoginPage(driver);
         loginPage.login(driver, uid, pwd);
+        driver.close();
+        driver.quit();
     }
 
     public void mySleep(long millis) {

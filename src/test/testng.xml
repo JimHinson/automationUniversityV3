@@ -5,9 +5,9 @@
     <test name="smoketest">
         <classes>
             <class name="com.cengage.webAssignLoginTest">
-                <methods>
-                    <include name="webAssignLoginTest"></include>
-                </methods>
+<!--                <methods>-->
+<!--                    <include name="webAssignLoginTest"></include>-->
+<!--                </methods>-->
             </class>
         </classes>
     </test>
@@ -15,9 +15,9 @@
         <classes>
             <class name="fizzbuzz"></class>
             <class name="com.cengage.webAssignLoginTest">
-                <methods>
-                    <include name="loginTest"></include>
-                </methods>
+<!--                <methods>-->
+<!--                    <include name="loginTest"></include>-->
+<!--                </methods>-->
             </class>
         </classes>
     </test>
