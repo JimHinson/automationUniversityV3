@@ -1,6 +1,6 @@
 <component name="libraryTable">
   <library name="org.testng:reportng:1.2.2" type="repository">
-    <properties maven-id="org.testng:reportng:1.2.2" />
+    <properties maven-id="org.testng:reportng:LATEST" />
     <CLASSES>
       <root url="jar://$MAVEN_REPOSITORY$/org/testng/reportng/1.2.2/reportng-1.2.2.jar!/" />
       <root url="jar://$MAVEN_REPOSITORY$/org/testng/testng/7.0.0/testng-7.0.0.jar!/" />
@@ -16,7 +16,32 @@
       <root url="jar://$MAVEN_REPOSITORY$/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar!/" />
       <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar!/" />
     </CLASSES>
-    <JAVADOC />
-    <SOURCES />
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/testng/reportng/1.2.2/reportng-1.2.2-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/testng/testng/7.0.0/testng-7.0.0-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/beust/jcommander/1.72/jcommander-1.72-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/freemarker/freemarker/2.3.28/freemarker-2.3.28-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/inject/guice/4.2.0/guice-4.2.0-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/javax/inject/javax.inject/1/javax.inject-1-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/23.6-android/guava-23.6-android-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/checkerframework/checker-compat-qual/2.0.0/checker-compat-qual-2.0.0-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/errorprone/error_prone_annotations/2.1.3/error_prone_annotations-2.1.3-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/testng/reportng/1.2.2/reportng-1.2.2-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/testng/testng/7.0.0/testng-7.0.0-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/beust/jcommander/1.72/jcommander-1.72-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/freemarker/freemarker/2.3.28/freemarker-2.3.28-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/inject/guice/4.2.0/guice-4.2.0-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/javax/inject/javax.inject/1/javax.inject-1-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/aopalliance/aopalliance/1.0/aopalliance-1.0-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/23.6-android/guava-23.6-android-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/checkerframework/checker-compat-qual/2.0.0/checker-compat-qual-2.0.0-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/errorprone/error_prone_annotations/2.1.3/error_prone_annotations-2.1.3-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

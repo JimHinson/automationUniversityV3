@@ -84,10 +84,13 @@ public class webAssignLoginTest {
         loginPage.login(driver, uid, pwd);
 
         //WebAssign home page takes a bit longer to load.
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+//        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
         //Let's leave the window open so we can see it
         mySleep(2000);
+
+        driver.close();
+        driver.quit();
     }
 
     @DataProvider(parallel = true, name = "data-provider")

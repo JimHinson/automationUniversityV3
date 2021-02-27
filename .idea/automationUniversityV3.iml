@@ -19,5 +19,7 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="org.seleniumhq.selenium:selenium-java:4" level="project" />
+    <orderEntry type="library" name="org.jetbrains:annotations:20.1.0" level="application" />
   </component>
 </module>
